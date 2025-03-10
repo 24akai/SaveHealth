@@ -69,21 +69,21 @@ h2 {
 
 .feature-wellbeing {
     padding-top: 60px;
-    background-image: url("../img/health-icon.png");
+    background-image: url("../img/health.webp");
     background-size: contain;
     height: 5px;
 }
 
 .feature-prevention {
     padding-top: 60px;
-    background-image: url("../img/health-icon.png");
+    background-image: url("../img/health.webp");
     background-size: contain;
     height: 5px;
 }
 
 .feature-healthy {
     padding-top: 60px;
-    background-image: url("../img/health-icon.png");
+    background-image: url("../img/health.webp");
     background-size: contain;
     height: 5px;
 }
