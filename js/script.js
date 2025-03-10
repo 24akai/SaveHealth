@@ -25,23 +25,20 @@ function updatePillDisplay() {
 }
 
 document.getElementById('btn_health_wishes').addEventListener('click', function() {
-   
-    let index = Math.floor(Math.random() * arrayOfHealthTips.length);
-    document.getElementById('health-wishes').innerText = arrayOfHealthTips[index];
-
-    countOfPills--;
-    console.log(countOfPills);
-    
-    updatePillDisplay();
-    
+    if (countOfPills > 0) {
+        let index = Math.floor(Math.random() * arrayOfHealthTips.length);
+        document.getElementById('health-wishes').innerText = arrayOfHealthTips[index];
+        countOfPills--;
+        updatePillDisplay();
+    }
     if (countOfPills === 0) {
-        console.log("countOfPills = 0");
+        document.getElementById("btn_health_wishes").disabled = true;
         document.getElementById("btn_health_wishes").innerText = "Get more health tips!";
     }
 });
 document.getElementById("health-wishes-footer").addEventListener("click", function() {
-    
     countOfPills = 5;
-    updatePillDisplay();  
-    document.getElementById("btn_health_wishes").innerText = "Take a health wish"; 
+    updatePillDisplay();
+    document.getElementById("btn_health_wishes").innerText = "Take a health wish";
+    document.getElementById("btn_health_wishes").disabled = false;
 });
