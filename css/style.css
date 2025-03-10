@@ -1,0 +1,147 @@
+body { 
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    background: #e0f7fa url("../img/healthy-back.jpg");
+}
+
+h1 {
+    width: 260px;
+    font-family: "Georgia", serif;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 27px;
+    color: #2e7d32; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.site-header {
+    margin-bottom: 30px;
+}
+
+.skills-item {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 10px solid #ffffff;
+    color: #4caf50;
+}
+
+.standard {
+    border-color: #388e3c;
+    color: #388e3c;
+}
+
+.vip {
+    border-color: #1b5e20;
+    color: #1b5e20;
+}
+
+.container {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.site-header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.features {
+    margin-bottom: 30px;
+}
+
+.features p {
+    padding-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 5px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top 10%;
+}
+
+.feature-wellbeing {
+    padding-top: 60px;
+    background-image: url("../img/health-icon.png");
+    background-size: contain;
+    height: 5px;
+}
+
+.feature-prevention {
+    padding-top: 60px;
+    background-image: url("../img/health-icon.png");
+    background-size: contain;
+    height: 5px;
+}
+
+.feature-healthy {
+    padding-top: 60px;
+    background-image: url("../img/health-icon.png");
+    background-size: contain;
+    height: 5px;
+}
+
+.skills {
+    padding-top: 40px;
+}
+
+.skills-list {
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+}
+
+.wishes {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #a5d6a7; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#btn_health_wishes {
+    cursor: pointer;
+    background-color: #66bb6a; 
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #388e3c; 
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btn_health_wishes:hover {
+    background-color: #388e3c;
+}
+
+#health-wishes {
+    font-size: 20px;
+    color: #1b5e20;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.site-footer p {
+    border: 1px solid #43a047;
+    padding: 10px 20px;
+    border-radius: 10px 0px;
+    background-color: #c8e6c9;
+    cursor: pointer;
+}
+
+.site-footer p:last-child {
+    cursor: auto;
+}
