@@ -15,15 +15,11 @@ const arrayOfHealthTips = [
     "Take breaks during the day to stay refreshed."
 ]
 
-
 let countOfPills = 5; 
-
 document.getElementById("count-of-tablets").innerText = "💊".repeat(countOfPills);
-
 function updatePillDisplay() {
     document.getElementById("count-of-tablets").innerText = "💊".repeat(countOfPills) + "❌".repeat(5 - countOfPills);
 }
-
 document.getElementById('btn_health_wishes').addEventListener('click', function() {
     if (countOfPills > 0) {
         let index = Math.floor(Math.random() * arrayOfHealthTips.length);
@@ -41,4 +37,30 @@ document.getElementById("health-wishes-footer").addEventListener("click", functi
     updatePillDisplay();
     document.getElementById("btn_health_wishes").innerText = "Take a health wish";
     document.getElementById("btn_health_wishes").disabled = false;
+});
+
+ const arrayOfImages = [ 
+     "main-image.png", 
+     "2.jpg", 
+     "3.jpg", 
+     "4.jpg" 
+     ]; 
+document.getElementById('btn_health_wishes').addEventListener('click', () => { 
+    let index = Math.floor(Math.random() * arrayOfHealthTips.length)
+    document.getElementById("health-wishes").innerText = arrayOfHealthTips[index] 
+    }); 
+let galleryImage = 1 
+document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}`)
+document.getElementById('right-arrow').addEventListener('click', () => { 
+    galleryImage++; 
+    console.log(galleryImage); 
+    if (galleryImage > arrayOfImages.length) galleryImage = 1
+    document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}`) 
+}); 
+document.getElementById('left-arrow').addEventListener('click', () => { 
+    galleryImage--
+    console.log(galleryImage)
+                  
+    if (galleryImage === 0) galleryImage = 3
+    document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}`)   
 });

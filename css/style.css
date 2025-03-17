@@ -145,3 +145,25 @@ h2 {
 .site-footer p:last-child {
     cursor: auto;
 }
+
+.gallery {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: 20px auto;
+}
+
+.gallery-arrows {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin:0 10px;
+}
+
+#main-image {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+    margin:0 10px;
+}
