@@ -154,11 +154,13 @@ h2 {
     margin: 20px auto;
 }
 
+
 .gallery-arrows {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    margin:0 10px;
+    position: absolute;
+    top: 45%; 
 }
 
 #main-image {
@@ -166,6 +168,7 @@ h2 {
     height: 300px;
     object-fit: contain;
     margin:0 10px;
+    margin-left: 60px;
 }
 
 
