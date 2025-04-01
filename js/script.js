@@ -66,27 +66,27 @@ document.getElementById('left-arrow').addEventListener('click', () => {
 });
 
 
-const arrayOfObjects = [
+const arrayOfVitamins = [
     {
         id: 1,
-        title: "Omega-3",
-        photo: "", // Add the photo URL here
-        description: "Omega-3 fatty acids are essential for heart, brain, and eye health.",
+        title: "D",
+        photo: "d.png", 
+        description: "Vitamin D is essential for calcium absorption and bone health.",
         rating: 3,
         type: "Fat-soluble"
     },
     {
         id: 2,
-        title: "Magnium",
-        photo: "", // Add the photo URL here
-        description: "Magnesium is important for muscle and nerve function, as well as bone formation.",
+        title: "B12",
+        photo: "b12.png",
+        description: "Vitamin B12 is crucial for nerve function and the production of red blood cells.",
         rating: 5,
-        type: "Mineral"
+        type: "Water-soluble"
     },
     {
         id: 3,
-        title: "Vitamin B",
-        photo: "", // Add the photo URL here
+        title: "Vitamin B+",
+        photo: "b+.png", 
         description: "Vitamin B complex improves energy levels, nervous system function, and metabolism.",
         rating: 2,
         type: "Water-soluble"
@@ -94,31 +94,35 @@ const arrayOfObjects = [
     {
         id: 4,
         title: "Vitamin C",
-        photo: "", // Add the photo URL here
-        description: "Vitamin C strengthens the immune system and helps fight infections.",
+        photo: "c.png",
+        description: "Vitamin C strengthens the immune system, helps in wound healing, and acts as an antioxidant.",
         rating: 4,
         type: "Water-soluble"
     },
     {
         id: 5,
-        title: "Vitamin A",
-        photo: "",
-        description: "Vitamin A is important for eye health and supporting the immune system.",
+        title: "Vitamin E",
+        photo: "e.png",
+        description: "Vitamin E is a powerful antioxidant that helps protect cells from damage and supports skin health.",
         rating: 1,
         type: "Fat-soluble"
     }
 ];
-console.log(arrayOfObjects)
-
-arrayOfObjects.forEach((item) => {
-    console.log(item)
-    
-    let divVitamin = document.createElement('div')
-    divVitamin.innerText = item.title
-
-    divVitamin.style.border = '1px solid black'
-    divVitamin.style.margin = '10px'
-    divVitamin.style.padding = '10px'
-    
-    document.getElementById("p-vitamin").appendChild(divVitamin)
-})
+  
+  arrayOfVitamins.forEach((item, index) => {
+  
+    let divVitamin = document.createElement("div");
+    divVitamin.classList.add("vitamin");
+  
+    document.getElementById("p-vitamin").appendChild(divVitamin);
+  
+    divVitamin.innerHTML = `
+         <span>${item.id}</span>
+         <h3>${item.title}</h3>
+         <hr>
+            <img src="img/vitamins/${item.photo}" alt="">
+            <p>${item.description}</p>
+            <span>${"💊".repeat(item.rating) + "❌".repeat(5 - item.rating)}</span>
+            <p>${item.type}</p>
+              `;
+  });
