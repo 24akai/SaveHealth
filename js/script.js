@@ -66,63 +66,32 @@ document.getElementById('left-arrow').addEventListener('click', () => {
 });
 
 
-const arrayOfVitamins = [
-    {
-        id: 1,
-        title: "D",
-        photo: "d.png", 
-        description: "Vitamin D is essential for calcium absorption and bone health.",
-        rating: 3,
-        type: "Fat-soluble"
-    },
-    {
-        id: 2,
-        title: "B12",
-        photo: "b12.png",
-        description: "Vitamin B12 is crucial for nerve function and the production of red blood cells.",
-        rating: 5,
-        type: "Water-soluble"
-    },
-    {
-        id: 3,
-        title: "Vitamin B+",
-        photo: "b+.png", 
-        description: "Vitamin B complex improves energy levels, nervous system function, and metabolism.",
-        rating: 2,
-        type: "Water-soluble"
-    },
-    {
-        id: 4,
-        title: "Vitamin C",
-        photo: "c.png",
-        description: "Vitamin C strengthens the immune system, helps in wound healing, and acts as an antioxidant.",
-        rating: 4,
-        type: "Water-soluble"
-    },
-    {
-        id: 5,
-        title: "Vitamin E",
-        photo: "e.png",
-        description: "Vitamin E is a powerful antioxidant that helps protect cells from damage and supports skin health.",
-        rating: 1,
-        type: "Fat-soluble"
-    }
-];
+
+fetch('js/vitamins.json')
+    .then(response => response.json())
+    .then(data => {
+
+         data.forEach((item, index) => {
   
-  arrayOfVitamins.forEach((item, index) => {
+            let divVitamin = document.createElement("div");
+            divVitamin.classList.add("vitamin");
   
-    let divVitamin = document.createElement("div");
-    divVitamin.classList.add("vitamin");
-  
-    document.getElementById("p-vitamin").appendChild(divVitamin);
-  
-    divVitamin.innerHTML = `
-         <span>${item.id}</span>
-         <h3>${item.title}</h3>
-         <hr>
-            <img src="img/vitamins/${item.photo}" alt="">
-            <p>${item.description}</p>
-            <span>${"💊".repeat(item.rating) + "❌".repeat(5 - item.rating)}</span>
-            <p>${item.type}</p>
-              `;
-  });
+            divVitamin.innerHTML = `
+                 <span>${item.id}</span>
+                 <h3>${item.title}</h3>
+                 <hr>
+                 <img src="img/vitamins/${item.photo}" alt="">
+                 <p>${item.description}</p>
+                 
+                 <div>
+                    <img src="img/vitamins/${item.schema}" alt="">
+                       <span>${"💊".repeat(item.rating) + "❌".repeat(5 - item.rating)}</span>
+                       <p>${item.type}</p>
+                 </div>
+                 `;
+            document.getElementById("p-vitamin").appendChild(divVitamin);
+  })
+})
+.catch(error => {
+    console.error("Download error! JSON:", error);
+});
