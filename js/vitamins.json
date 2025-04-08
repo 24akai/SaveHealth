@@ -43,5 +43,14 @@
         "schema": "vitamine.png",
         "rating": 1,
         "type": "Fat-soluble"
+    },
+    {
+        "id": 6,
+        "title": "Default vitamin",
+        "photo": "",
+        "description": "-",
+        "schema": "",
+        "rating": 0,
+        "type": "-----"
     }
 ]

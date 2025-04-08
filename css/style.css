@@ -190,6 +190,11 @@ h2 {
     min-height:300px;
 }
 
+.vitamin:hover {
+    background-color: #b3e0bb;
+    transition: background-color 0.3s ease;
+}
+
 .vitamin span:first-child{
     text-align: right;
     font-size: 10px;
@@ -204,3 +209,26 @@ h2 {
     width: 50px;
     height: 50px;
 }
+
+.vitamin div {
+    margin-top: auto;
+    width: 100%;
+}
+
+.vitamin div>img{
+    width: 100%;
+    height: auto;
+}
+
+.vitamin .type-text {
+    cursor: pointer;
+    background-color: #66bb6a; 
+    color: white;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
