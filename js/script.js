@@ -83,11 +83,11 @@ fetch('js/vitamins.json')
                  <span>${item.id}</span>
                  <h3>${item.title}</h3>
                  <hr>
-                 <img src="img/vitamins/${item.photo}" alt="" onerror="this.oneerror =  null; this.src="img/vitamins/default.png">
+                 <img src="img/vitamins/${item.photo}" alt="" onerror="this.oneerror =  null; this.src='img/vitamins/default.png';">
                  <p>${item.description}</p>
                  
                  <div>
-                    <img src="img/vitamins/${item.schema}" alt="Scheme is empty!" onerror="this.oneerror =  null; this.src="img/vitamins/defaultScheme.png">
+                    <img src="img/vitamins/${item.schema}" alt="Scheme is empty!" onerror="this.oneerror =  null; this.src='img/vitamins/defaultScheme.png';">
                        <span>${"💊".repeat(item.rating) + "❌".repeat(5 - item.rating)}</span>
                        <p class="type-text">${item.type}</p>
                  </div>
